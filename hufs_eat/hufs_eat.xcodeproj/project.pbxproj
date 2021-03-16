@@ -13,6 +13,7 @@
 		1087023E25FBB1E800FECFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1087023C25FBB1E800FECFD5 /* Main.storyboard */; };
 		1087024025FBB1EA00FECFD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1087023F25FBB1EA00FECFD5 /* Assets.xcassets */; };
 		1087024325FBB1EA00FECFD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1087024125FBB1EA00FECFD5 /* LaunchScreen.storyboard */; };
+		30E4E8E6A27E08FBB1F30E56 /* Pods_hufs_eat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37059510D016949F309BC44 /* Pods_hufs_eat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,9 @@
 		1087024225FBB1EA00FECFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1087024425FBB1EA00FECFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10AC49DC25FBB4B900EA1EA8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		68A2B7C0AAE6B46A2D3A8BDA /* Pods-hufs_eat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hufs_eat.release.xcconfig"; path = "Target Support Files/Pods-hufs_eat/Pods-hufs_eat.release.xcconfig"; sourceTree = "<group>"; };
+		BEA139A4C7FA470291D3D625 /* Pods-hufs_eat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hufs_eat.debug.xcconfig"; path = "Target Support Files/Pods-hufs_eat/Pods-hufs_eat.debug.xcconfig"; sourceTree = "<group>"; };
+		C37059510D016949F309BC44 /* Pods_hufs_eat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hufs_eat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E4E8E6A27E08FBB1F30E56 /* Pods_hufs_eat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,8 @@
 			children = (
 				1087023525FBB1E800FECFD5 /* hufs_eat */,
 				1087023425FBB1E800FECFD5 /* Products */,
+				2109F90F94BB3686C9E8497A /* Pods */,
+				3467E52A47200D41C8C72D24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +156,24 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		2109F90F94BB3686C9E8497A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEA139A4C7FA470291D3D625 /* Pods-hufs_eat.debug.xcconfig */,
+				68A2B7C0AAE6B46A2D3A8BDA /* Pods-hufs_eat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3467E52A47200D41C8C72D24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C37059510D016949F309BC44 /* Pods_hufs_eat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1087024725FBB1EA00FECFD5 /* Build configuration list for PBXNativeTarget "hufs_eat" */;
 			buildPhases = (
+				48778D7927053001561C3CDE /* [CP] Check Pods Manifest.lock */,
 				1087022F25FBB1E800FECFD5 /* Sources */,
 				1087023025FBB1E800FECFD5 /* Frameworks */,
 				1087023125FBB1E800FECFD5 /* Resources */,
+				EC4B9B2EDEEBD0A9F7C890DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,6 +240,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48778D7927053001561C3CDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hufs_eat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC4B9B2EDEEBD0A9F7C890DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hufs_eat/Pods-hufs_eat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hufs_eat/Pods-hufs_eat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hufs_eat/Pods-hufs_eat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1087022F25FBB1E800FECFD5 /* Sources */ = {
@@ -365,6 +434,7 @@
 		};
 		1087024825FBB1EA00FECFD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEA139A4C7FA470291D3D625 /* Pods-hufs_eat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -383,6 +453,7 @@
 		};
 		1087024925FBB1EA00FECFD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68A2B7C0AAE6B46A2D3A8BDA /* Pods-hufs_eat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
