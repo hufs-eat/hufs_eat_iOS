@@ -28,7 +28,7 @@ struct Constants {
     }
     
     struct Header {
-        static let editorsHeader: String = "editorHeader"
+        static let editorsHeader: String = "EditorsHeader"
     }
     
     

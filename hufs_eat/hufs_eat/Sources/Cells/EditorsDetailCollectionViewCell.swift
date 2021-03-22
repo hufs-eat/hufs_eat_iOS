@@ -18,6 +18,7 @@ class EditorsDetailCollectionViewCell: UICollectionViewCell {
         self.EditorsRecommendCollectionView.register(UINib(nibName: Constants.Cell.editorsRecommendCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Cell.editorsRecommendCollectionViewCell)
         self.EditorsRecommendCollectionView.delegate = self
         self.EditorsRecommendCollectionView.dataSource = self
+        self.EditorsRecommendCollectionView.register(UINib(nibName: Constants.Header.editorsHeader, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Constants.Header.editorsHeader)
         // Initialization code
     }
 
@@ -40,7 +41,21 @@ extension EditorsDetailCollectionViewCell: UICollectionViewDataSource {
 }
 
 extension EditorsDetailCollectionViewCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Constants.Header.editorsHeader, for: indexPath)
+            return headerView
+        default:
+            return UICollectionReusableView()
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: self.frame.width, height: 120)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 116)
     }
 }
