@@ -16,6 +16,23 @@ extension UIView {
         shapeLayer.path = bezierPath.cgPath
         self.layer.mask = shapeLayer
     }
+    
+    func addTopRoundedEdge(_ width: CGFloat,_ y: CGFloat) {
+        let path = UIBezierPath()
+        path.lineWidth = 3
+        path.move(to: CGPoint(x: 0, y: y+30))
+        path.addQuadCurve(to: CGPoint(x:width, y: y+30), controlPoint: CGPoint(x: width/2, y: y-30))
+        path.flatness = 0.0
+
+        let maskLayer: CAShapeLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        maskLayer.strokeColor = UIColor.black.cgColor
+        maskLayer.fillColor = UIColor.clear.cgColor
+        maskLayer.frame = self.bounds
+        maskLayer.lineJoin = .round
+
+        self.layer.addSublayer(maskLayer)
+    }
 }
 
 

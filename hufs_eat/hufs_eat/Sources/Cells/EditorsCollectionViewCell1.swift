@@ -9,9 +9,13 @@ import UIKit
 
 class EditorsCollectionViewCell1: UICollectionViewCell {
     
+    var designated: Bool = false
+    
     // MARK: - IBOutlets
     @IBOutlet weak var editorNameLabel: UILabel!
     @IBOutlet weak var editorImageView: UIImageView!
+    @IBOutlet weak var labelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var superView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,10 +24,18 @@ class EditorsCollectionViewCell1: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            if isSelected {
-                print(1)
-            }else {
-                print(2)
+            if isSelected && !designated{
+                designated.toggle()
+                UIView.animate(withDuration: 0.1) {
+                    self.labelTopConstraint.constant += 30
+                    self.superView.layoutIfNeeded()
+                }
+            } else if !isSelected && designated {
+                designated.toggle()
+                UIView.animate(withDuration: 0.1) {
+                    self.labelTopConstraint.constant -= 30
+                    self.superView.layoutIfNeeded()
+                }
             }
         }
     }

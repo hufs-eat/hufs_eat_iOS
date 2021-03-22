@@ -83,10 +83,9 @@ extension EditorsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == self.editorsCollectionView {
-            print(collectionView.frame.height)
-            
-            return CGSize(width: collectionView.frame.width/5, height: 140)
+            return CGSize(width: collectionView.frame.width/5, height: 180)
         } else {
+            self.view.addTopRoundedEdge(self.view.frame.width, collectionView.frame.origin.y)
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         }
         
@@ -104,8 +103,8 @@ extension EditorsViewController: UICollectionViewDelegateFlowLayout {
         let width = collectionView.frame.width/5
         UIView.animate(withDuration: 0.25){ () in
             self.circleLeadingConstraint.constant = (width * CGFloat(indexPath.item)) + width/2 - 7
-//            self.circleImageView.layoutIfNeeded()
             self.circleSuperView.layoutIfNeeded()
+            self.editorsDetailCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
         }
     }
     

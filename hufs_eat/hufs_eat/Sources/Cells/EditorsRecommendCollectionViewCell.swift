@@ -13,5 +13,4 @@ class EditorsRecommendCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="164" height="177"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmC-6a-4L8">
-                                <rect key="frame" x="61" y="20" width="42" height="21"/>
+                                <rect key="frame" x="61" y="10" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="RrB-Dm-FBr"/>
                                     <constraint firstAttribute="width" constant="42" id="fff-5X-RaN"/>
@@ -29,15 +29,15 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uHs-H1-M33">
-                                <rect key="frame" x="0.0" y="46" width="164" height="131"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uHs-H1-M33">
+                                <rect key="frame" x="0.0" y="36" width="164" height="141"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uHs-H1-M33" firstAttribute="top" secondItem="JmC-6a-4L8" secondAttribute="bottom" constant="5" id="VWW-SL-ZxJ"/>
                             <constraint firstAttribute="trailing" secondItem="uHs-H1-M33" secondAttribute="trailing" id="YMD-xz-vRC"/>
-                            <constraint firstItem="JmC-6a-4L8" firstAttribute="top" secondItem="GJ2-kT-dZh" secondAttribute="top" constant="20" id="Yoe-Ss-3ub"/>
+                            <constraint firstItem="JmC-6a-4L8" firstAttribute="top" secondItem="GJ2-kT-dZh" secondAttribute="top" constant="10" id="Yoe-Ss-3ub"/>
                             <constraint firstItem="uHs-H1-M33" firstAttribute="leading" secondItem="GJ2-kT-dZh" secondAttribute="leading" id="nJz-yA-hjW"/>
                             <constraint firstAttribute="bottom" secondItem="uHs-H1-M33" secondAttribute="bottom" id="u1E-gK-zXM"/>
                             <constraint firstItem="JmC-6a-4L8" firstAttribute="centerX" secondItem="GJ2-kT-dZh" secondAttribute="centerX" id="vDM-jJ-H0v"/>

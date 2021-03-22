@@ -29,8 +29,8 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-bd-7KR">
-                                <rect key="frame" x="0.0" y="26" width="72" height="56"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-bd-7KR">
+                                <rect key="frame" x="0.0" y="26" width="72" height="46"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,7 +38,7 @@
                             <constraint firstItem="bOg-bd-7KR" firstAttribute="top" secondItem="oVH-4P-g3Z" secondAttribute="bottom" constant="5" id="cmJ-Gf-H98"/>
                             <constraint firstItem="oVH-4P-g3Z" firstAttribute="centerX" secondItem="Es1-Ul-fvB" secondAttribute="centerX" id="eOG-G1-6yT"/>
                             <constraint firstItem="bOg-bd-7KR" firstAttribute="leading" secondItem="Es1-Ul-fvB" secondAttribute="leading" id="goA-9y-dUv"/>
-                            <constraint firstAttribute="bottom" secondItem="bOg-bd-7KR" secondAttribute="bottom" id="jvj-z8-gjg"/>
+                            <constraint firstAttribute="bottom" secondItem="bOg-bd-7KR" secondAttribute="bottom" constant="10" id="jvj-z8-gjg"/>
                             <constraint firstAttribute="trailing" secondItem="bOg-bd-7KR" secondAttribute="trailing" id="qGB-Vi-v7C"/>
                             <constraint firstItem="oVH-4P-g3Z" firstAttribute="top" secondItem="Es1-Ul-fvB" secondAttribute="top" id="zLq-Sx-eNU"/>
                         </constraints>
@@ -56,6 +56,8 @@
             <connections>
                 <outlet property="editorImageView" destination="bOg-bd-7KR" id="f22-ll-kU5"/>
                 <outlet property="editorNameLabel" destination="oVH-4P-g3Z" id="l8l-st-CK0"/>
+                <outlet property="labelTopConstraint" destination="zLq-Sx-eNU" id="WFP-Q7-ixA"/>
+                <outlet property="superView" destination="Es1-Ul-fvB" id="3UX-oL-6eK"/>
             </connections>
             <point key="canvasLocation" x="-181.15942028985509" y="120.53571428571428"/>
         </collectionViewCell>

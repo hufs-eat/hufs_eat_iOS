@@ -9,6 +9,8 @@ import UIKit
 
 class EditorsCollectionViewCell2: UICollectionViewCell {
 
+    var designated: Bool = false
+    
     @IBOutlet weak var superView: UIView!
     @IBOutlet weak var editorImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,12 +23,15 @@ class EditorsCollectionViewCell2: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            if isSelected {
+            if isSelected && !designated{
+                designated.toggle()
                 UIView.animate(withDuration: 0.1) {
+                    print(1)
                     self.labelTopConstraint.constant += 30
                     self.superView.layoutIfNeeded()
                 }
-            } else {
+            } else if !isSelected && designated {
+                designated.toggle()
                 UIView.animate(withDuration: 0.1) {
                     self.labelTopConstraint.constant -= 30
                     self.superView.layoutIfNeeded()

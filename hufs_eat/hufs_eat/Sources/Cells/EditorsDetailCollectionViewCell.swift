@@ -21,6 +21,14 @@ class EditorsDetailCollectionViewCell: UICollectionViewCell {
         self.EditorsRecommendCollectionView.register(UINib(nibName: Constants.Header.editorsHeader, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Constants.Header.editorsHeader)
         // Initialization code
     }
+    
+    override var isSelected: Bool {
+        didSet {
+            if !isSelected {
+                self.EditorsRecommendCollectionView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 1, height: 1), animated: true)
+            }
+        }
+    }
 
 }
 
