@@ -1,0 +1,6 @@
+framework module Pods_hufs_eat {
+  umbrella header "Pods-hufs_eat-umbrella.h"
+
+  export *
+  module * { export * }
+}
