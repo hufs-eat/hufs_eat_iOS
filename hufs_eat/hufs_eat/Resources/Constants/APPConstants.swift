@@ -30,4 +30,16 @@ struct Constants {
     struct Header {
         static let editorsHeader: String = "editorHeader"
     }
+    
+    
+    struct Image {
+        // editors
+        static let chacha: UIImage = UIImage(named: "chacha")!
+        static let ji: UIImage = UIImage(named: "ji")!
+        static let june: UIImage = UIImage(named: "june")!
+        static let pak: UIImage = UIImage(named: "pak")!
+        static let tak: UIImage = UIImage(named: "tak")!
+        
+        static let editors_cursor: UIImage = UIImage(named: "editors_cursor")!
+    }
 }
